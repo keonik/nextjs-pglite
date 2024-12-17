@@ -2,11 +2,22 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build"
+    "build": "next build",
+    "db:generate": "drizzle-kit generate && bun ./db/compile-migrations.ts"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@electric-sql/pglite": "^0.2.14",
+    "@types/bun": "^1.1.14",
+    "@types/node": "^22.10.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.4",
+    "next": "^15.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "drizzle-kit": "^0.28.1",
+    "typescript": "5.7.2"
   }
 }
